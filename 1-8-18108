@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+int main(void) {
+    int y;
+    int p = 2541 - 1998;
+    scanf("%d", &y);
+    printf("%d\n" , y - p);
+    return 0;
+}
