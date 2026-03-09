@@ -2,9 +2,9 @@
 
 int main(void)
 {
-    printf("/    /\\\n");
-    printf(")  ( ')\n");
+    printf("\\    /\\\n");
+    printf(" )  ( ')\n");
     printf("(  /  )\n");
-    printf(" \\(__)|");
+    printf(" \\(__)|\n");
     return 0;
 }
