@@ -4,7 +4,10 @@
 int main(void)
 {
     // srand((unsigned)time(NULL));
-    // int A, B, C = rand() % 6 + 1;
+    // int A  = rand() % 6 + 1;
+    // int B  = rand() % 6 + 1;
+    // int C  = rand() % 6 + 1;
+
     int A, B, C;
     scanf("%d %d %d", &A, &B, &C);
     if (A == B && B == C)
@@ -13,12 +16,12 @@ int main(void)
     }
     else if (A == B || A == C || B == C)
     {
-        printf("%d", 1000 + (A == B ? A : C) * 100);
+        printf("%d", 1000 + ((A == B || A == C) ? A : C) * 100);
     }
     else
     {
-        int max = A > B ? A : B > C ? B
-                                    : C;
+        int max = (A > B && A > C) ? A : (B > C) ? B
+                                                 : C;
         printf("%d", max * 100);
     }
 
