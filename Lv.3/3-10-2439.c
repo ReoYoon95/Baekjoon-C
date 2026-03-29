@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+void star();
+
 int main(void) 
 {
     int C;
@@ -32,4 +34,18 @@ int main(void)
 }
 
 
-
+//개선된 코드 방식
+void star()
+{
+    int C;
+    if(scanf("%d", &C) != 1) return 0;
+    for (int i = 1; i <= C; i++) {
+        // C칸만큼의 공간을 잡고, 그 안에 i개의 별을 오른쪽 정렬!
+        // 하지만 C언어는 문자열 반복이 안 되므로, 
+        // 실제로는 아래처럼 '가변 폭'을 지정하는 테크닉을 씁니다.
+        printf("%*s", C - i, ""); // 공백을 C-i칸만큼 먼저 찍고 
+        //*에 c-i가 대입되는고 s에 ""이 대입되는 것. 즉, 공백을 C-i칸만큼 찍는다는 의미.
+        for (int j = 1; j <= i; j++) printf("*"); // 별을 찍음
+    printf("\n");
+    }
+}
