@@ -39,3 +39,35 @@ int main(void)
     }
     return 0;
 }
+
+
+//코드수정
+
+int main(void) 
+{
+    int T;
+    int A, B;
+    scanf("%d", &T);
+    
+
+    for (int i = 0; i < T; i++)
+    {
+        scanf("%d %d", &A, &B);
+        if (A >= 1 && A <= 1000) 
+        {
+            if (B >= 1 && B <= 1000) {
+                printf("%d\n", A + B);
+            }
+        }
+    }
+    return 0;
+}
+
+
+// 
+// #define IS_IN(n) ((n) >= 1 && (n) <= 1000)
+
+// // 실제 사용 시
+// if (IS_IN(A) && IS_IN(B)) {
+//     printf("%d\n", A + B);
+// } 이렇게 디판인을 이용해 할 수도 있음.
